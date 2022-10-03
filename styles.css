@@ -1,0 +1,132 @@
+
+*{  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{    
+    background: linear-gradient(135deg, rgb(34, 3, 83),  rgb(90, 9, 29));
+    background-image: url(bgimg.jpg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 800px;
+    padding: 25px 30px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ae727e, #494336, #b8808d);
+}
+
+.wrapper .heading{
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0px 0px 20px 0px;
+}
+
+.wrapper .heading::before{
+    content: ''; 
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #fff, #ae727e, #ffffff, #b8808d);
+}
+
+.wrapper form .card-details{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .card-details .card-box{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.card-details .card-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card-details .card-box input{
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #fff;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 1s step-end;
+    caret-color: #ad717d;
+}
+
+.card-details .card-box input:focus,
+.card-details .card-box input:valid{
+    border-color: hsl(348, 27%, 56%);
+    border: 2px;
+}
+
+form .button{
+    text-align: center;
+}
+
+form .button input{
+    padding: 10px 0;
+    margin-top: 20px;
+    height: 100%;
+    width: 50%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+form .button input:hover{
+    background-color:#ad717d;
+    color: #fff;
+    cursor: pointer;   
+}
+
+form a{
+    color: white;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px) {
+    .wrapper{
+        max-width: 100%;
+    }
+
+   form .card-details .card-box{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .wrapper form .card-details{
+        max-height: 300px;
+        overflow: scroll;
+    }
+    .button{
+        max-width: 100%
+    }
+    .card-details::_webkit-scrollbar{
+        width:0;
+    }
+} 
